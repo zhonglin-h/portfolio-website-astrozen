@@ -1,5 +1,5 @@
 import type { SiteConfig, SiteContent } from "../types";
-import.meta.env.BASE_URL;
+import { withBase } from "../util/url.js";
 
 export const SITE_CONFIG: SiteConfig = {
   title: "WORK IN PROGRESS",
@@ -7,30 +7,27 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "TBD",
   lang: "en",
-  siteLogo: `${import.meta.env.BASE_URL}alejandro-small.jpg`,
+  siteLogo: withBase(`headshot.JPG`),
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    { text: "LinkedIn", href: "https://ca.linkedin.com/in/zhonglin-huang-a1334b102" },
+    { text: "Github", href: "https://github.com/zhonglin-h" },
   ],
-  socialImage: `${import.meta.env.BASE_URL}zen-og.png`,
+  socialImage: withBase(`zen-og.png`),
   canonicalURL: "https://astro-zen.vercel.app",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "WORK IN PROGRESS",
-    specialty: "Mobile & Web Developer",
+    specialty: "Full-Stack Developer",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Developer based in the Great Toronto Area, ON. I specialize in Spring Boot and VueJS application development and maintenance.",
+    email: "zhonglin.h.000@gmail.com",
   },
   experience: [
     {
@@ -69,21 +66,21 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A music streaming app that emulates Spotify's core features.",
       linkPreview: "/",
       linkSource: "https://github.com/immois/astro-zen",
-      image: `${import.meta.env.BASE_URL}spotifu.png`,
+      image: withBase(`spotifu.png`),
     },
     {
       name: "Shopp App",
       summary: "An e-commerce platform that replicates Shopify's key features.",
       linkPreview: "/",
       linkSource: "https://github.com/immois/astro-zen",
-      image: `${import.meta.env.BASE_URL}shopify-clon.png`,
+      image: withBase(`shopify-clon.png`),
     },
     {
       name: "ClonTagram",
       summary: "A social network that replicates the features of Instagram",
       linkPreview: "/",
       linkSource: "https://github.com/immois/astro-zen",
-      image: `${import.meta.env.BASE_URL}clone-ig.png`,
+      image: withBase(`clone-ig.png`),
     },
   ],
   about: {
@@ -92,7 +89,7 @@ export const SITE_CONTENT: SiteContent = {
 
       Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
     `,
-    image: `${import.meta.env.BASE_URL}alejandro-big.jpg`,
+    image: withBase(`headshot.JPG`),
   },
 };
 
