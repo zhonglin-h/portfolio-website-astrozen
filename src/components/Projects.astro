@@ -2,13 +2,14 @@
 import Section from "./Section.astro";
 import { Image } from "astro:assets";
 import type { ProjectProps } from "@types";
-import.meta.env.BASE_URL;
+import { withBase } from "src/util/url";
 
 interface Props {
   projects: ProjectProps[];
 }
 
 const { projects } = Astro.props;
+const externalIconUrl = withBase("external.svg");
 ---
 
 <Section text="Featured Projects" href="projects">
@@ -30,14 +31,14 @@ const { projects } = Astro.props;
                 <a
                   href={linkSource}
                   target="_blank"
-                  class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                  class={`after:relative after:bottom-[-5px] after:content-[url(${externalIconUrl})] hover:underline`}
                 >
                   Source
                 </a>
                 <a
                   href={linkPreview}
                   target="_blank"
-                  class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                  class={`after:relative after:bottom-[-5px] after:content-[url(${externalIconUrl})] hover:underline`}
                 >
                   Preview
                 </a>

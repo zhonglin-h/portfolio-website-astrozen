@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   output: "static",
   site: "https://zhonglin-h.github.io",
-  base: '/portfolio-website-astro-zen/',
+  base: '/portfolio-website-astrozen/',
   vite: {
     plugins: [tailwindcss()],
   },
